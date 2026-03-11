@@ -1,28 +1,18 @@
-# ITIV13
+# Angular V13 Recap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+This repository is a comprehensive recap of the Angular ITI V13 course.  
+It includes:
 
-## Development server
+- **Code snippets** from lessons to quickly review important concepts.  
+- **Practice projects** to apply Angular 13 skills hands-on.  
+- **Notes and cheatsheets** for faster learning and reference.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Whether you are revising for exams, improving your Angular skills, or just exploring Angular 13, this repo will guide you through the key topics and practical exercises.
 
-## Code scaffolding
+## 🛠 Technologies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# Angular-V13-Recap" 
+- Angular 13
+- TypeScript
+- HTML & CSS
+- RxJS & Observables
+- Angular CLI
