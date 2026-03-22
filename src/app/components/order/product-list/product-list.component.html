@@ -1,0 +1,39 @@
+<!-- <div *ngFor="let product of productList">
+  <div class="card m-2" style="width: 18rem;">
+    <img [src]="product.imgUrl" class="card-img-top" [alt]="product.name">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">Price: {{product.price}}</p>
+      <p class="card-text">Quantity: {{product.quantity}}</p>
+      <a href="#" class="btn btn-primary">Add To Cart</a>
+    </div>
+  </div>
+</div> -->
+
+  <table class="table ">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">AV . Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Count </th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList">
+        <td>{{product?.id}}</td>
+        <td>{{product.name}}</td>
+        <td><img [src]="product.imgUrl" alt="{{product.name}}" width="50"></td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.price}}</td>
+        <td><input type="number"  class="form-control" min="1" #quantityInp></td>
+        <td>
+          <button class="btn btn-primary" (click)="buy(product.id,quantityInp.value)">Add To Cart</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
