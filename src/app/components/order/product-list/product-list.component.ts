@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ICategory } from 'src/app/models/icategory';
 import { Iproduct } from 'src/app/models/iproduct';
 
 @Component({
@@ -7,8 +8,15 @@ import { Iproduct } from 'src/app/models/iproduct';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+  catlist:ICategory[];
   productList:Iproduct[];
+  sellectedCatId:number=0;
+  orderTotal:number=0;
   constructor() {
+    this.catlist = [
+      {id:1,name:'Electronics'},
+      {id:2,name:'Clothing'}
+    ];
     this.productList = [
       {id:1,name:'product 1',price:100,quantity:10,imgUrl:'https://picsum.photos/200',categoryId:1},
       {id:2,name:'product 2',price:200,quantity:20,imgUrl:'https://picsum.photos/200',categoryId:1},
@@ -21,7 +29,6 @@ export class ProductListComponent implements OnInit {
   }
 
   buy(productId:number,quantity:string){
-    console.log(`product id: ${productId} , quantity: ${quantity}`);
-    console.log(typeof +quantity);
+    this.orderTotal += Number(quantity) * productId
   }
 }

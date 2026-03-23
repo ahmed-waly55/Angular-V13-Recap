@@ -9,7 +9,19 @@
     </div>
   </div>
 </div> -->
+<div class="mb-3">
+  <label for="prodcat" class="form-label">Category :</label>
+  <select  class="form-select form-select-lg" name="cat" id="prodcat" [(ngModel)]="sellectedCatId">
+    <option  *ngFor="let cat of catlist" [value]="cat.id">{{cat.name}}</option>
 
+  </select>
+</div>
+<div class="text-secondary">
+  [to be removed ] for test : {{sellectedCatId}}
+</div>
+
+<hr>
+<h1>{{orderTotal}}</h1>
   <table class="table ">
     <thead>
       <tr>
@@ -31,7 +43,7 @@
         <td>{{product.price}}</td>
         <td><input type="number"  class="form-control" min="1" #quantityInp></td>
         <td>
-          <button class="btn btn-primary" (click)="buy(product.id,quantityInp.value)">Add To Cart</button>
+          <button class="btn btn-primary" (click)="buy(product.price,quantityInp.value)">Add To Cart</button>
         </td>
       </tr>
 
